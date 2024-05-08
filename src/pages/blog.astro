@@ -1,19 +1,16 @@
 ---
-import { sortedBlogPosts } from '../utils/getSortedPosts';
-
-let latestPosts = Astro.props.postCount
-  ? sortedBlogPosts.slice(0, Astro.props.postCount)
-  : sortedBlogPosts;
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogTimeline from '../components/blogTimeline.astro';
 ---
 
-<article class="blog-list">
-  <h1>Blog</h1>
-  <ul>
-    {latestPosts.map((post) => (
-      <li>
-        <a href={`/posts/${post.slug}`}>{post.data.title}</a>
-      </li>
-    ))}
-  </ul>
-</article>
+<BaseLayout>
+  <section class="card-mx card-p max-w-3xl">
+    <div class="mb-16 mt-24 sm:text-center">
+      <h1 class="mb-4 text-5xl font-bold">blog</h1>
+      <p class="mb-5 text-lg text-muted-foreground">
+        my thoughts on software development.
+      </p>
+    </div>
+    <BlogTimeline lineClamp="line-clamp-3" split={true} />
+  </section>
+</BaseLayout>
