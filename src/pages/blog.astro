@@ -1,0 +1,19 @@
+---
+import { sortedBlogPosts } from '../utils/getSortedPosts';
+
+let latestPosts = Astro.props.postCount
+  ? sortedBlogPosts.slice(0, Astro.props.postCount)
+  : sortedBlogPosts;
+
+---
+
+<article class="blog-list">
+  <h1>Blog</h1>
+  <ul>
+    {latestPosts.map((post) => (
+      <li>
+        <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+      </li>
+    ))}
+  </ul>
+</article>
