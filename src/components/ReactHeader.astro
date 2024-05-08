@@ -1,0 +1,72 @@
+---
+import { Button } from '@/components/ui/button';
+// import { ModeToggle } from '@/components/ModeToggle';
+// import { SideMenu } from '@/components/SideMenu';
+// import { CommandMenu } from '@/components/CommandMenu';
+// import { mainLinks } from './navLinks';
+// import Logo from './Logo.astro';
+// import { AccentColorSelector } from './AccentColorSelector';
+// import { ProjectsDropdown } from './ProjectsDropdown';
+import { sortedBlogPosts } from '@/utils/getSortedPosts';
+import { HomeIcon, User, NotebookTabs } from 'lucide-react';
+
+
+const mainLinks = [
+  {
+    name: 'Home',
+    icon: HomeIcon,
+    href: '/',
+    shortcut: '⌘E',
+  },
+//   {
+//     name: 'About',
+//     icon: User,
+//     href: '/about',
+//     shortcut: '⌘A',
+//   },
+  {
+    name: 'Blog',
+    icon: NotebookTabs,
+    href: '/blog',
+    shortcut: '⌘B',
+  },
+];
+---
+
+<header
+  class="sticky top-0 z-10 flex mb-8 w-full bg-background items-center border-b border-border/50 px-[clamp(0.75rem,3vw,2.5rem)] py-2">
+<a href="/">
+  <span
+    class="logo flex h-9 items-center gap-x-2.5 pb-0.5 text-xl font-bold text-foreground text-nowrap">
+    Astro Testing
+  </span>
+</a>
+  <div class="button-container ml-2 flex w-full items-center justify-between">
+    <nav>
+      <span class="hidden gap-2 px-4 sm:flex">
+        {
+          mainLinks.map((link, index) => (
+            <a href={link.href} class="rounded-md">
+              <Button
+                client:load
+                aria-label={link.name}
+                key={index}
+                tabIndex={-1}
+                variant="link"
+                className="h-9 px-2 text-muted-foreground hover:text-foreground/80 hover:no-underline">
+                {link.name}
+              </Button>
+            </a>
+          ))
+        }
+        <!-- <ProjectsDropdown client:load /> -->
+      </span>
+    </nav>
+    <!-- <span class="flex items-center gap-2">
+      <CommandMenu client:load posts={sortedBlogPosts} />
+      <AccentColorSelector client:load />
+      <SideMenu client:load />
+      <ModeToggle client:load />
+    </span> -->
+  </div>
+</header>
