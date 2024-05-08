@@ -7,5 +7,9 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   output: "hybrid",
   adapter: cloudflare(),
-  integrations: [tailwind()]
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+  ],
 });

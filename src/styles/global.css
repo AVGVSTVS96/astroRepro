@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* scrollbar-color: hsla(0, 0%, 60%, 0.2) transparent;
+    scrollbar-width: thin; */
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+
+  ::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: hsla(0, 0%, 60%, 0.2);
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: hsla(0, 0%, 60%, 0.4);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background-color: hsla(0, 0%, 60%, 0.3);
+  }
+
+  [data-theme="slate"] {
+    --accent-50: theme(colors.slate.50);
+    --accent-100: theme(colors.slate.100);
+    --accent-200: theme(colors.slate.200);
+    --accent-300: theme(colors.slate.300);
+    --accent-400: theme(colors.slate.400);
+    --accent-500: theme(colors.slate.500);
+    --accent-600: theme(colors.slate.600);
+    --accent-700: theme(colors.slate.700);
+    --accent-800: theme(colors.slate.800);
+    --accent-900: theme(colors.slate.900);
+    --accent-950: theme(colors.slate.950);
+  }
+
+  [data-theme="sky"] {
+    --accent-50: theme(colors.sky.50);
+    --accent-100: theme(colors.sky.100);
+    --accent-200: theme(colors.sky.200);
+    --accent-300: theme(colors.sky.300);
+    --accent-400: theme(colors.sky.400);
+    --accent-500: theme(colors.sky.500);
+    --accent-600: theme(colors.sky.600);
+    --accent-700: theme(colors.sky.700);
+    --accent-800: theme(colors.sky.800);
+    --accent-900: theme(colors.sky.900);
+    --accent-950: theme(colors.sky.950);
+  }
+
+  [data-theme="violet"] {
+    --accent-50: theme(colors.violet.50);
+    --accent-100: theme(colors.violet.100);
+    --accent-200: theme(colors.violet.200);
+    --accent-300: theme(colors.violet.300);
+    --accent-400: theme(colors.violet.400);
+    --accent-500: theme(colors.violet.500);
+    --accent-600: theme(colors.violet.600);
+    --accent-700: theme(colors.violet.700);
+    --accent-800: theme(colors.violet.800);
+    --accent-900: theme(colors.violet.900);
+    --accent-950: theme(colors.violet.950);
+  }
+
+  [data-theme="emerald"] {
+    --accent-50: theme(colors.emerald.50);
+    --accent-100: theme(colors.emerald.100);
+    --accent-200: theme(colors.emerald.200);
+    --accent-300: theme(colors.emerald.300);
+    --accent-400: theme(colors.emerald.400);
+    --accent-500: theme(colors.emerald.500);
+    --accent-600: theme(colors.emerald.600);
+    --accent-700: theme(colors.emerald.700);
+    --accent-800: theme(colors.emerald.800);
+    --accent-900: theme(colors.emerald.900);
+    --accent-950: theme(colors.emerald.950);
+  }
+
+  [data-theme="teal"] {
+    --accent-50: theme(colors.teal.50);
+    --accent-100: theme(colors.teal.100);
+    --accent-200: theme(colors.teal.200);
+    --accent-300: theme(colors.teal.300);
+    --accent-400: theme(colors.teal.400);
+    --accent-500: theme(colors.teal.500);
+    --accent-600: theme(colors.teal.600);
+    --accent-700: theme(colors.teal.700);
+    --accent-800: theme(colors.teal.800);
+    --accent-900: theme(colors.teal.900);
+    --accent-950: theme(colors.teal.950);
+  }
+
+  [data-theme="cyan"] {
+    --accent-50: theme(colors.cyan.50);
+    --accent-100: theme(colors.cyan.100);
+    --accent-200: theme(colors.cyan.200);
+    --accent-300: theme(colors.cyan.300);
+    --accent-400: theme(colors.cyan.400);
+    --accent-500: theme(colors.cyan.500);
+    --accent-600: theme(colors.cyan.600);
+    --accent-700: theme(colors.cyan.700);
+    --accent-800: theme(colors.cyan.800);
+    --accent-900: theme(colors.cyan.900);
+    --accent-950: theme(colors.cyan.950);
+  }
+
+  [data-theme="fuchsia"] {
+    --accent-50: theme(colors.fuchsia.50);
+    --accent-100: theme(colors.fuchsia.100);
+    --accent-200: theme(colors.fuchsia.200);
+    --accent-300: theme(colors.fuchsia.300);
+    --accent-400: theme(colors.fuchsia.400);
+    --accent-500: theme(colors.fuchsia.500);
+    --accent-600: theme(colors.fuchsia.600);
+    --accent-700: theme(colors.fuchsia.700);
+    --accent-800: theme(colors.fuchsia.800);
+    --accent-900: theme(colors.fuchsia.900);
+    --accent-950: theme(colors.fuchsia.950);
+  }
+
+  [data-theme="amber"] {
+    --accent-50: theme(colors.amber.50);
+    --accent-100: theme(colors.amber.100);
+    --accent-200: theme(colors.amber.200);
+    --accent-300: theme(colors.amber.300);
+    --accent-400: theme(colors.amber.400);
+    --accent-500: theme(colors.amber.500);
+    --accent-600: theme(colors.amber.600);
+    --accent-700: theme(colors.amber.700);
+    --accent-800: theme(colors.amber.800);
+    --accent-900: theme(colors.amber.900);
+    --accent-950: theme(colors.amber.950);
+  }
+}
+
+/* @layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .blue-underline {
+    @apply underline decoration-accent-500 decoration-2 underline-offset-[5px] dark:decoration-accent-500 dark:hover:text-primary-200/75 dark:hover:decoration-accent-600/80;
+  }
+
+  .card-mx {
+    @apply mx-4;
+  }
+
+  .card-p {
+    @apply p-6;
+  }
+
+  .h1 {
+    @apply dark:text-light text-dark text-4xl font-extrabold;
+  }
+} */

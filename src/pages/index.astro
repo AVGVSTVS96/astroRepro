@@ -1,16 +1,9 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro"
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
+<BaseLayout>
 	<body>
-		<h1>Astro</h1>
+		<h1 class="text-center text-2xl font-bold">Astro</h1>
+		<p>Minimal Reproduction of hybrid rendering issue</p>
 	</body>
-</html>
+</BaseLayout>
