@@ -104,7 +104,7 @@
   }
 }
 
-/* @layer base {
+@layer base {
   * {
     @apply border-border;
   }
@@ -130,4 +130,4 @@
   .h1 {
     @apply dark:text-light text-dark text-4xl font-extrabold;
   }
-} */
+}
