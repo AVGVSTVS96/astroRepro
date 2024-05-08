@@ -1,34 +1,15 @@
 ---
 import { Button } from '@/components/ui/button';
-// import { ModeToggle } from '@/components/ModeToggle';
-// import { SideMenu } from '@/components/SideMenu';
-// import { CommandMenu } from '@/components/CommandMenu';
-// import { mainLinks } from './navLinks';
-// import Logo from './Logo.astro';
-// import { AccentColorSelector } from './AccentColorSelector';
-// import { ProjectsDropdown } from './ProjectsDropdown';
-import { sortedBlogPosts } from '@/utils/getSortedPosts';
-import { HomeIcon, User, NotebookTabs } from 'lucide-react';
 
 
 const mainLinks = [
   {
     name: 'Home',
-    icon: HomeIcon,
     href: '/',
-    shortcut: '⌘E',
   },
-//   {
-//     name: 'About',
-//     icon: User,
-//     href: '/about',
-//     shortcut: '⌘A',
-//   },
   {
     name: 'Blog',
-    icon: NotebookTabs,
     href: '/blog',
-    shortcut: '⌘B',
   },
 ];
 ---
@@ -59,14 +40,7 @@ const mainLinks = [
             </a>
           ))
         }
-        <!-- <ProjectsDropdown client:load /> -->
       </span>
     </nav>
-    <!-- <span class="flex items-center gap-2">
-      <CommandMenu client:load posts={sortedBlogPosts} />
-      <AccentColorSelector client:load />
-      <SideMenu client:load />
-      <ModeToggle client:load />
-    </span> -->
   </div>
 </header>
