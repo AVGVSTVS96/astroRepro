@@ -7,6 +7,11 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  markdown: {
+    shikiConfig: {
+      theme: "vesper",
+    },
+  },
   output: "hybrid",
   adapter: cloudflare({ imageService: "compile" }),
   integrations: [

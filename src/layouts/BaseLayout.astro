@@ -1,10 +1,12 @@
 ---
 import ReactHeader from "@/components/ReactHeader.astro";
 import "/src/styles/global.css";
+import Meta from "@/components/Meta.astro";
 ---
 
 <html lang="en" class="min-h-dvh w-dvw">
   <head>
+    <Meta />
     <slot name="head" />
   </head>
   <body class="flex min-h-screen w-dvw flex-col items-center overflow-x-hidden">
