@@ -7,19 +7,19 @@
       "groupName": "Astro Adapters and Integrations",
       "matchPackagePatterns": ["^@astrojs/"],
       "matchUpdateTypes": ["minor", "patch"],
-      "prTitle": "{{#if (eq depCount 1)}}Update {{depName}} to {{newVersion}}{{else}}Update {{depCount}} dependencies in Astro Adapters and Integrations group{{/if}}"
+      "prTitle": "{{#if (eq updates.length 1)}}Update {{updates.0.depName}} to {{updates.0.newVersion}}{{else}}Update {{updates.length}} dependencies in Astro Adapters and Integrations group{{/if}}"
     },
     {
       "groupName": "Radix",
       "matchPackagePatterns": ["^@radix-ui/"],
       "matchUpdateTypes": ["minor", "patch"],
-      "prTitle": "{{#if (eq depCount 1)}}Update {{depName}} to {{newVersion}}{{else}}Update {{depCount}} dependencies in Radix group{{/if}}"
+      "prTitle": "{{#if (eq updates.length 1)}}Update {{updates.0.depName}} to {{updates.0.newVersion}}{{else}}Update {{updates.length}} dependencies in Radix group{{/if}}"
     },
     {
       "groupName": "Types",
       "matchPackagePatterns": ["^@types/"],
       "matchUpdateTypes": ["minor", "patch"],
-      "prTitle": "{{#if (eq depCount 1)}}Update {{depName}} to {{newVersion}}{{else}}Update {{depCount}} dependencies in Types group{{/if}}"
+      "prTitle": "{{#if (eq updates.length 1)}}Update {{updates.0.depName}} to {{updates.0.newVersion}}{{else}}Update {{updates.length}} dependencies in Types group{{/if}}"
     },
     {
       "groupName": "Other",
