@@ -7,19 +7,25 @@
       "groupName": "Astro Adapters and Integrations",
       "matchPackagePatterns": ["^@astrojs/"],
       "matchUpdateTypes": ["minor", "patch"],
-      "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}Update {{upgrades.0.depName}} to {{upgrades.0.newVersion}}{{else}}Update {{length upgrades}} dependencies in Astro Adapters and Integrations group{{/if}}"
+      "commitMessageAction": "Update",
+      "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}dependencies in Astro Adapters and Integrations group{{/if}}",
+      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} updates{{/if}}"
     },
     {
       "groupName": "Radix",
       "matchPackagePatterns": ["^@radix-ui/"],
       "matchUpdateTypes": ["minor", "patch"],
-      "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}Update {{upgrades.0.depName}} to {{upgrades.0.newVersion}}{{else}}Update {{length upgrades}} dependencies in Radix group{{/if}}"
+      "commitMessageAction": "Update",
+      "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}dependencies in Radix group{{/if}}",
+      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} updates{{/if}}"
     },
     {
       "groupName": "Types",
       "matchPackagePatterns": ["^@types/"],
       "matchUpdateTypes": ["minor", "patch"],
-      "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}Update {{upgrades.0.depName}} to {{upgrades.0.newVersion}}{{else}}Update {{length upgrades}} dependencies in Types group{{/if}}"
+      "commitMessageAction": "Update",
+      "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}dependencies in Types group{{/if}}",
+      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} updates{{/if}}"
     }
   ]
 }
