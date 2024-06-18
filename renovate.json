@@ -1,6 +1,22 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
+  "extends": ["config:recommended"],
+  "prHourlyLimit": 6,
+  "packageRules": [
+    {
+      "groupName": "Astro Adapters and Integrations",
+      "matchPackagePatterns": ["^@astrojs/"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "Radix",
+      "matchPackagePatterns": ["^@radix-ui/"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "Types",
+      "matchPackagePatterns": ["^@types/"],
+      "matchUpdateTypes": ["minor", "patch"]
+    }
   ]
 }
