@@ -20,11 +20,6 @@
       "matchPackagePatterns": ["^@types/"],
       "matchUpdateTypes": ["minor", "patch"],
       "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}Update {{upgrades.0.depName}} to {{upgrades.0.newVersion}}{{else}}Update {{length upgrades}} dependencies in Types group{{/if}}"
-    },
-    {
-      "groupName": "Other",
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"]
     }
   ]
 }
